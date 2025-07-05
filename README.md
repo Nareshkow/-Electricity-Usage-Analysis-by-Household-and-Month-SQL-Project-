@@ -82,12 +82,6 @@ Goal:Automatically set cost_usd when new billing data is inserted.
 How:Created BEFORE INSERT trigger to calculate:
 cost_usd = total_kwh * rate_per_kwh.
 
-## Task 9: AFTER INSERT Trigger for Metrics Calculation
-
-Goal:Insert calculated metrics (kWh per occupant, usage category) into a separate table when a new billing record is added.
-
-Logic:kWh per occupant = total_kwh / Num_occupants.
-Usage category: total_kwh > 600 → "High", else "Moderate".
 
 
 
